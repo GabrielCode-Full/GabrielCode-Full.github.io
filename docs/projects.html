@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/caffeine.svg" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <title>Projects | Gabriel Cacayan</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="img/caffeine.svg" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <title>Projects | Gabriel Cacayan</title>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="navbar-links">
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About me</a>
-      <a href="projects.html" class="navbar-active">Projects</a>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About me</a>
+        <a href="projects.html" class="navbar-active">Projects</a>
+      </div>
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger-nav">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </div>
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger-nav">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <!-- Hamburger Active -->
+    <div id="hamburger-active">
+      <div id="hamburger-links">
+        <a href="index.html"><i class="fas fa-home icons"></i> Home</a>
+        <a href="aboutme.html"><i class="fas fa-user-alt icons"></i> About me</a>
+        <a href="projects.html" class="ham-link"><i class="fas fa-tasks icons"></i> Projects</a>
+      </div>
     </div>
-  </div>
-  <!-- Hamburger Active -->
-  <div id="hamburger-active">
-    <div id="hamburger-links">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="aboutme.html"><i class="fas fa-user-alt"></i> About me</a>
-      <a href="projects.html" class="ham-link"><i class="fas fa-tasks"></i> Projects</a>
+    <!-- Hamburger overlay -->
+    <div class="hamburger-overlay" id="hamburger-overlay"></div>
+    <!-- Body Content -->
+    <div class="projects-container">
+      <h1>Coming soon.</h1>
+      <img src="img/programming.svg" />
     </div>
-  </div>
-  <!-- Hamburger overlay -->
-  <div class="hamburger-overlay" id="hamburger-overlay"></div>
-  <!-- Body Content -->
-  <div class="projects-container">
-    <h1>Coming soon.</h1>
-    <img src="img/programming.svg">
-  </div>
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <h6>&#169; 2020 Gabriel Cacayan.</h6>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&#169; 2020 Gabriel Cacayan.</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
