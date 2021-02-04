@@ -3,22 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriel Cacayan" />
+    <meta name="description" content="Portfolio website built with HTML,CSS, and Javascript." />
+    <meta name="keywords"  content="Portfolio, Junior Web Developer"/>
+    <title>About me | Gabriel Cacayan</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/caffeine.svg" />
+    
+    <!-- JS library, Font-awesome, Google fonts -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-    <title>About me | Gabriel Cacayan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <!-- Navbar -->
     <div class="navbar">
+      <div class="logo">
+         <h3>Gabriel Cacayan</h3>
+      </div>
       <div class="navbar-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html" class="navbar-active">About me</a>
@@ -44,23 +52,21 @@
     <!-- About Me -->
     <div class="about-container">
       <div class="about-title">
-        <div class="border"></div>
-        <h6 class="title-text">About Me</h6>
+        <h6 class="title-text">About me</h6>
       </div>
       <div class="about-content">
         <p>
-          Hi there! my name is <strong>Gabriel Cacayan,</strong> and I am focused on Web Development. My hobby is
-          programming on <strong>codewars,</strong> a platform for developers to improve their programming skills. I am
-          also capable of building web application from <strong>front to back</strong> using
-          <strong>HTML</strong>,<strong>CSS</strong>, <strong>JAVASCRIPT</strong>, <strong>PHP</strong>, and
-          <strong>MySQL</strong>.
+          Hi there! my name is Gabriel Cacayan, and I am focused on Web Development. My hobby is
+          programming on <a href="https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5">codewars</a>, a platform for developers to improve their programming skills. I am
+          also capable of building web application from front to back using
+          HTML,CSS, JAVASCRIPT, PHP, and
+          MySQL.
         </p>
         <br />
         <p>I am also willing to learn in different environment to improve my skills.</p>
       </div>
       <!--  Skills -->
       <div class="about-title">
-        <div class="border"></div>
         <h2 class="title-text">Skills</h2>
       </div>
       <div class="about-content">
@@ -68,39 +74,41 @@
           <h3 class="bold">Front-end:</h3>
           <div class="about-front-end">
             <img
-              src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg"
-              alt="html5"
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
             />
             <img
-              src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg"
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
               alt="css3"
             />
             <img
-              src="https://devicons.github.io/devicon/devicon.git/icons/bootstrap/bootstrap-plain.svg"
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
               alt="bootstrap"
             />
             <img
-              src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg"
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
               alt="javascript"
             />
           </div>
           <h3 class="bold">Back-end:</h3>
           <div class="about-back-end">
-            <img src="https://devicons.github.io/devicon/devicon.git/icons/php/php-original.svg" alt="php" />
+            <img src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png" alt="php" />
             <img
-              src="https://devicons.github.io/devicon/devicon.git/icons/mysql/mysql-original-wordmark.svg"
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
               alt="mysql"
+            />
+            <img
+              src="https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png"
+              alt="laravel"
             />
           </div>
           <h3 class="bold">Tools:</h3>
           <div class="about-back-end">
-            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" />
+            <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="git" />
           </div>
         </div>
       </div>
       <!-- Contact -->
       <div class="about-title">
-        <div class="border"></div>
         <h2 class="title-text">Contact</h2>
       </div>
       <div class="about-content">
@@ -108,7 +116,6 @@
       </div>
       <!-- Education -->
       <div class="about-title">
-        <div class="border"></div>
         <h2 class="title-text">Education</h2>
       </div>
       <div class="about-content">
@@ -116,17 +123,16 @@
       </div>
       <!-- Role -->
       <div class="about-title">
-        <div class="border"></div>
         <h2 class="title-text">Role</h2>
       </div>
       <div class="about-content">
-        <p>Frond-end Developer</p>
+        <p>Web Developer</p>
       </div>
     </div>
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <p>&#169; 2020 Gabriel Cacayan.</p>
+        <p>&#169; 2020 Gabriel Cacayan</p>
       </div>
     </footer>
     <script src="js/main.js"></script>
