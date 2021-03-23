@@ -34,6 +34,26 @@
     box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
   }
   
+  .btn-default {
+    color: #212529;
+    background-color: #F9FAFB;
+    border-color: #D1D5DB;
+  }
+  
+  .btn-default:hover {
+    color: #212529;
+    background-color: #F3F4F6;
+    border-color:  #D1D5DB;
+  }
+  
+  .btn-default:focus,
+  .btn-default.focus {
+    color: #212529;
+    background-color: #F3F4F6;
+    border-color:  #D1D5DB;
+  }
+  
+
   .btn-blue {
     color: #fff;
     background-color: #5158dd;
@@ -70,4 +90,42 @@
     color: #fff;
     background-color: #464cc2;
     border-color:  #464cc2;
+  }
+
+  .btn-green {
+    color: #fff;
+    background-color:#28a745;
+    border-color:#28a745;
+}
+  
+ .btn-green:hover {
+    color: #fff;
+    background-color: #22863a;
+    border-color: #22863a;
+ }
+
+ .btn-green:focus,
+ .btn-green.focus {
+    color: #fff;
+    background-color:  #22863a;
+    border-color:   #22863a;
+ }
+
+ .btn-outline-green {
+    color: #28a745;
+    background-color: none;
+    border-color: #28a745;
+  }
+  
+  .btn-outline-green:hover {
+    color: #fff;
+    background-color: #22863a;
+    border-color:  #22863a;
+  }
+  
+  .btn-outline-green:focus,
+  .btn-outline-green.focus {
+    color: #fff;
+    background-color: #22863a;
+    border-color:  #22863a;
   }
