@@ -1,140 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Gabriel Cacayan" />
-    <meta name="description" content="Portfolio website built with HTML,CSS, and Javascript." />
-    <meta name="keywords"  content="Portfolio, Junior Web Developer"/>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/caffeine.svg" />
-    <!-- JS library, Font-awesome, Google fonts -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <title>About me | Gabriel Cacayan</title>
-  </head>
 
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="logo">
-         <h3>Gabriel Cacayan</h3>
-      </div>
-      <div class="navbar-links">
-        <a href="index.html">Home</a>
-        <a href="aboutme.html" class="navbar-active">About me</a>
-        <a href="projects.html">Projects</a>
-      </div>
-      <!-- Hamburger -->
-      <div class="hamburger" id="hamburger-nav">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </div>
-    <!-- Hamburger Active -->
-    <div id="hamburger-active">
-      <div id="hamburger-links">
-        <a href="index.html"><i class="fas fa-home icons"></i>Home</a>
-        <a href="aboutme.html" class="ham-link"><i class="fas fa-user-alt icons"></i>About me</a>
-        <a href="projects.html"><i class="fas fa-tasks icons"></i>Projects</a>
-      </div>
-    </div>
-    <!-- Hamburger overlay -->
-    <div class="hamburger-overlay" id="hamburger-overlay"></div>
-    <!-- About Me -->
-    <div class="about-container">
-      <div class="about-title">
-        <h6 class="title-text">About me</h6>
-      </div>
-      <div class="about-content">
-        <p class="about-text">
-          I am focused on Web Development and my hobby is
-          programming on <a href="https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5">codewars</a>, a platform for students and developers to improve their programming skills. I'm
-          also capable of building web application from front to back and also willing to learn in different environment to improve my skills.
-        </p>
-      </div>
-      <!--  Skills -->
-      <div class="about-title">
-        <h2 class="title-text">Skills</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-img">
-          <h3 class="bold">Front-end:</h3>
-          <div class="about-front-end">
-            <img
-              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
-            />
-            <img
-              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
-              alt="css3"
-            />
-            <img
-              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
-              alt="bootstrap"
-            />
-            <img
-              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-              alt="javascript"
-            />
-          </div>
-          <h3 class="bold">Back-end:</h3>
-          <div class="about-back-end">
-            <img src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png" alt="php" />
-            <img
-              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-              alt="mysql"
-            />
-            <img
-              src="https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png"
-              alt="laravel"
-            />
-          </div>
-          <h3 class="bold">Tools:</h3>
-          <div class="about-back-end">
-            <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="git" />
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/caffeine.svg" />
+
+  <!-- Primary Meta Tags -->
+  <title>About me | Gabriel Cacayan</title>
+  <meta name="title" content="Gabriel Cacayan">
+  <meta name="description"
+    content="currently a 4th-year student as a Bachelor of Science in Information Systems at the University of Caloocan City in the Philippines.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gabrielcode-full.github.io/">
+  <meta property="og:title" content="Gabriel Cacayan">
+  <meta property="og:description"
+    content="currently a 4th-year student as a Bachelor of Science in Information Systems at the University of Caloocan City in the Philippines.">
+  <meta property="og:image" content="img/me.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gabrielcode-full.github.io/">
+  <meta property="twitter:title" content="Gabriel Cacayan">
+  <meta property="twitter:description"
+    content="currently a 4th-year student as a Bachelor of Science in Information Systems at the University of Caloocan City in the Philippines.">
+  <meta property="twitter:image" content="img/me.jpg">
+
+  <!-- Tailwind and custon CSS -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="bg-blue-900 text-blue-100 p-5">
+    <div class="flex flex-row justify-between items-center mx-auto max-w-7xl">
+      <a href="index.html" class="hover:text-blue-50">
+        Gabriel Cacayan
+      </a>
+      <div class="hidden sm:block">
+        <div class="flex space-x-5 text-sm text-blue-200">
+          <a href="index.html" class="hover:text-blue-50">Home</a>
+          <a href="aboutme.html" class="text-blue-50">About me</a>
+          <a href="project.html" class="hover:text-blue-50">Projects</a>
         </div>
       </div>
-      <!-- Contact -->
-      <div class="about-title">
-        <h2 class="title-text">Contact</h2>
-      </div>
-      <div class="about-content">
-        <p class="about-text">gabrielcacayan@gmail.com</p>
-      </div>
-      <!-- Education -->
-      <div class="about-title">
-        <h2 class="title-text">Education</h2>
-      </div>
-      <div class="about-content">
-        <p class="about-text">Bachelor of Science in Information Systems</p>
-      </div>
-      <!-- Role -->
-      <div class="about-title">
-        <h2 class="title-text">Role</h2>
-      </div>
-      <div class="about-content">
-        <p class="about-text">Web Developer</p>
+      <!-- This hamburger icon will be displayed in small devices only -->
+      <div id="hamburger-open" class="block sm:hidden cursor-pointer">
+        <div class="flex flex-col space-y-1">
+          <div class="h-1 w-7 bg-blue-100 rounded-lg"></div>
+          <div class="h-1 w-7 bg-blue-100 rounded-lg"></div>
+          <div class="h-1 w-7 bg-blue-100 rounded-lg"></div>
+        </div>
       </div>
     </div>
-    <!-- Footer -->
-    <footer>
-      <div class="social-media">
-          <a href="https://github.com/GabrielCode-Full" target="_blank"><i class="fab fa-github soc-med"></i></a>
-          <a href="https://www.facebook.com/NEVERTRUSTSOME0NE/" target="_blank"><i class="fab fa-facebook soc-med"></i></a>
-           <a href="https://www.linkedin.com/in/gabriel-cacayan-215849184/?originalSubdomain=ph" target="_blank"><i class="fab fa-linkedin soc-med"></i></a>
+    <!-- This will be displayed if hamburger icon was clicked -->
+    <div id="hamburger-active"
+      class="transform -translate-y-full duration-1000 fixed inset-0 z-50 h-screen w-full bg-blue-900">
+      <div id="hamburger-links" class="text-blue-200 h-4/5 flex flex-col justify-center items-center space-y-5">
+        <a href="index.html" class="text-2xl hover:text-blue-50">Home</a>
+        <a href="aboutme.html" class="text-2xl text-blue-50">About me</a>
+        <a href="project.html" class="text-2xl hover:text-blue-50">Projects</a>
       </div>
-      <div class="footer-content">
-         <p>&#169; 2020 - 2021 Gabriel Cacayan</p>
+
+      <div id="hamburger-close" class="block sm:hidden position fixed top-5 right-5 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hover:text-blue-50" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
       </div>
-    </footer>
-    <script src="js/main.js"></script>
-  </body>
+    </div>
+  </nav>
+
+  <!-- about me container -->
+  <div class="bg-blue-100">
+    <div class="w-11/12 px-2 sm:px-5 py-5 mx-auto flex flex-col space-y-5">
+      <div class="mt-5 p-5 bg-blue-50 shadow-md rounded-lg flex flex-col space-y-3 w-full lg:w-3/5 mx-auto">
+        <h1 class="text-blue-900 text-3xl md:text-5xl">About me</h1>
+        <p class="text-gray-600">Currently focused on Web Development and my hobby is
+          programming on <a href="https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5"
+            class="text-blue-500 hover:underline">codewars</a>, a platform for
+          everyone who wants to improve their programming skills. I'm
+          also capable of building a web application from front to back and also willing to learn in a different
+          environment
+          to improve my skills.
+        </p>
+      </div>
+      <div class="mb-5 p-5 bg-blue-50 shadow-md rounded-lg flex flex-col space-y-3 w-full lg:w-3/5 mx-auto">
+        <h1 class="mb-5 text-blue-900 text-3xl md:text-5xl">Skills</h1>
+        <h3 class="text-xl md:text-2xl text-gray-700">Front-end</h3>
+        <div class="my-5 p-5 flex flex-row space-x-5">
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
+            alt="html5" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
+            alt="css3" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+            alt="javascript" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
+            alt="bootstrap" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tailwind/tailwind.png"
+            alt="tailwind" class="h-10 w-10" />
+        </div>
+        <h3 class="text-xl md:text-2xl text-gray-700">Back-end</h3>
+        <div class="my-5 p-5 flex flex-row space-x-5">
+          <img
+            src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png"
+            alt="php" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
+            alt="mysql" class="h-10 w-10" />
+          <img
+            src="https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png"
+            alt="laravel" class="h-10 w-10" />
+        </div>
+        <h3 class="text-xl md:text-2xl text-gray-700">Tools</h3>
+        <div class="mb-5 p-5 flex flex-row space-x-5">
+          <img
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
+            alt="git" class="h-10 w-10" />
+        </div>
+      </div>
+      <div class="p-5 bg-blue-50 shadow-md rounded-lg flex flex-col space-y-3 w-full lg:w-3/5 mx-auto">
+        <h3 class="text-blue-900 text-3xl md:text-5xl">Contact</h3>
+        <div>
+          <p class="text-gray-600">gabrielcacayan@gmail.com</p>
+        </div>
+      </div>
+      <div class="p-5 bg-blue-50 shadow-md rounded-lg flex flex-col space-y-3 w-full lg:w-3/5 mx-auto">
+        <h3 class="text-blue-900 text-3xl md:text-5xl">Education</h3>
+        <div>
+          <p class="text-gray-600">University of Caloocan City as Bachelor of Science in Information Systems
+            (2018
+            - Present)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-full text-center flex flex-col bg-blue-50">
+    <div class="flex justify-center items-center space-x-3 p-5">
+      <a href="https://www.facebook.com/NEVERTRUSTSOME0NE/" target="_blank"><img src="img/facebook.png"
+          alt="Facebook logo" class="h-6 w-6"></a>
+      <a href="https://github.com/GabrielCode-Full" target="_blank"><img src="img/github.png" alt="Github Logo"
+          class="h-6 w-6"></a>
+      <a href="https://www.linkedin.com/in/gabriel-cacayan-215849184/?originalSubdomain=ph" target="_blank"><img
+          src="img/linkedin.png" alt="LinkedIn Logo" class="h-6 w-6"></a>
+    </div>
+    <p class="p-5 bg-blue-900 text-blue-50">&#169; 2020 - 2021 Gabriel Cacayan</p>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="js/index.js"></script>
+</body>
+
 </html>
