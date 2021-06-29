@@ -81,9 +81,9 @@
         </div>
     </nav>
 
-    <!-- Wandertel container -->
-    <div class="bg-blue-100 my-8">
-        <div class="w-11/12 p-5 mx-auto flex flex-col space-y-7">
+
+    <main class="bg-blue-100 my-8">
+        <section class="w-11/12 p-5 mx-auto flex flex-col space-y-7">
             <div class="flex flex-col space-y-5 p-0 sm:p-5">
                 <h1 class="text-blue-900 text-3xl sm:text-5xl">About the project</h1>
                 <p class="text-blue-600">This project was created for my client, and my job is to change the current
@@ -95,10 +95,12 @@
             <div class="flex flex-col space-y-5 p-0 sm:p-5">
                 <h1 class="text-blue-900 text-3xl sm:text-5xl">Features</h1>
                 <ul class="list-disc list-inside text-gray-600">
-                    <li>The system has two user types: Administrators and Ordinary user</li>
-                    <li>The user can sign in, sign up, change password, and forgot password.</li>
-                    <li>The user can update the profile information.</li>
-                    <li>The user can book a room and view it.</li>
+                    <li>The system has two user types: Admin and ordinary users.</li>
+                    <li>The system has sign in, sign up, change password, and forgot password.</li>
+                    <li>The user can update his/her profile information.</li>
+                    <li>In admin's dashboard it mainly uses CRUD functions for creating, reading, updating, and deleting
+                        rooms.
+                    </li>
                 </ul>
             </div>
             <div class="flex flex-col space-y-5 p-0 sm:p-5">
@@ -139,7 +141,7 @@
                 <h1 class="text-blue-900 text-3xl sm:text-5xl">Gallery</h1>
                 <div class="overflow-hidden">
                     <a title="View gallery" id="wandertel"
-                        class="with-caption image-link flex flex-row space-x-1 bg-blue-900 transform hover:scale-125 duration-1000 border-2 border-blue-900 cursor-pointer">
+                        class="with-caption image-link flex flex-row space-x-1 bg-blue-900 transform hover:scale-110 duration-1000 border-2 border-blue-900 cursor-pointer">
                         <div class="flex flex-col space-y-1 bg-gray-500">
                             <img src="img/wandertel/wandertel_home.jpeg" class="h-auto w-auto" />
                         </div>
@@ -150,8 +152,8 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer class="w-full text-center flex flex-col bg-blue-50">
         <div class="flex justify-center items-center space-x-3 p-5">
