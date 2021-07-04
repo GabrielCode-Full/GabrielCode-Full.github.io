@@ -7,25 +7,6 @@ body {
 	transform: translateY(-0%);
 }
 
-.overlay-yowndrift {
-	display: block;
-}
-
-
-
-.fp-tableCell {
-	display: flex !important;
-	justify-content: center;
-	align-items: center;
-}
-
-#fp-nav.fp-right {
-	right: 0px !important;
-}
-
-#fp-nav {
-	z-index: 0 !important;
-}
 
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {

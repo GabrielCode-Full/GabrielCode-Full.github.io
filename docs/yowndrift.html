@@ -32,6 +32,7 @@
   <!-- Tailwind, Custom CSS, and Photoswipe library -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/photoswipe.css">
   <link rel="stylesheet" href="css/default-skin/default-skin.css">
 
@@ -163,7 +164,7 @@
 
         <h1 class="text-blue-900 text-3xl sm:text-5xl">Gallery</h1>
 
-        <div class="my-4 bg-blue-900">
+        <div class="my-4 bg-blue-900 hidden lg:block">
 
           <div id="demo-test-gallery" class="demo-gallery flex justify-start items-start">
 
@@ -179,8 +180,8 @@
 
             </a>
 
-            <a href="img/yowndrift/yowndrift_home.jpeg" data-size="1240x2229" data-author="Gabriel Cacayan">
-              <img src="img/yowndrift/yowndrift_home.jpeg" class="hidden"/>
+            <a href="img/yowndrift/yowndrift_home.jpeg" data-size="1240x2229" data-author="Gabriel Cacayan" class="hidden">
+              <img src="img/yowndrift/yowndrift_home.jpeg"/>
                <figure class="hidden">Home page.</figure>
             </a>
 
@@ -301,6 +302,21 @@
 
         </div>
 
+        <!-- Magnific -->
+          <div class="my-4 overflow-hidden block lg:hidden">
+                    <a title="View gallery" id="yowndrift"
+                        class="with-caption image-link flex flex-row space-x-1 bg-blue-900 transform hover:scale-110 duration-1000 border-2 border-blue-900 cursor-pointer">
+                        <div class="flex flex-col space-y-1 bg-blue-900">
+                            <img src="img/yowndrift/yowndrift_landing.jpeg" class="h-3/4 w-auto" />
+                            <img src="img/yowndrift/yowndrift_login.jpeg" class="h-3/4 w-auto" />
+                        </div>
+                        <div class="flex flex-col space-y-1 bg-blue-900">
+                            <img src="img/yowndrift/yowndrift_register.jpeg" class="h-3/4 w-auto" />
+                            <img src="img/yowndrift/yowndrift_search.png" class="h-3/4 w-auto" />
+                        </div>
+                    </a>
+                </div>
+
       </div>
     </section>
   </main>
@@ -320,12 +336,73 @@
     <p class="p-5 text-gray-900">&#169; 2020 - 2021 Gabriel Cacayan</p>
   </footer>
 
-  <!-- Custom JS and Photosipe library -->
+  <!-- Custom JS and Photoswipe library -->
   <script src="js/index.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/photoswipe.min.js"></script>
   <script src="js/photoswipe-ui-default.min.js"></script>
 
   <script>
+     $('#yowndrift').magnificPopup({
+            items: [{
+                    src: 'img/yowndrift/yowndrift_home.jpeg',
+                    title: 'Home page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_posts.jpeg',
+                    title: 'Posts page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_search.png',
+                    title: 'Search bar'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_post.jpeg',
+                    title: 'Article page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_user.jpeg',
+                    title: 'Author\'s posts page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_create_post.jpeg',
+                    title: 'Writing a post page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_login.jpeg',
+                    title: 'Log in page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_reset_password.jpeg',
+                    title: 'Reset password page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_register.jpeg',
+                    title: 'Register page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_dashboard.jpeg',
+                    title: 'Dashboard page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_update.jpeg',
+                    title: 'Edit page'
+                },
+                {
+                    src: 'img/yowndrift/yowndrift_profile.jpeg',
+                    title: 'Profile page'
+                },
+
+            ],
+            gallery: {
+                enabled: true
+            },
+            type: 'image'
+        });
+
     try {
       Typekit.load();
     } catch (e) {}
