@@ -29,10 +29,11 @@
         content="currently a 4th-year student as a Bachelor of Science in Information Systems at the University of Caloocan City in the Philippines.">
     <meta property="twitter:image" content="img/me.jpg">
 
-    <!-- Tailwind, Magnific Popup Library and custom CSS -->
+    <!-- Tailwind, Custom CSS, and Photoswipe library -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin/default-skin.css">
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -137,19 +138,87 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex flex-col space-y-5 p-0 sm:p-5">
+            <div class="p-0 sm:p-5">
                 <h1 class="text-blue-900 text-3xl sm:text-5xl">Gallery</h1>
-                <div class="overflow-hidden">
-                    <a title="View gallery" id="wandertel"
-                        class="with-caption image-link flex flex-row space-x-1 bg-blue-900 transform hover:scale-110 duration-1000 border-2 border-blue-900 cursor-pointer">
-                        <div class="flex flex-col space-y-1 bg-gray-500">
-                            <img src="img/wandertel/wandertel_home.jpeg" class="h-auto w-auto" />
+
+
+                <div class="my-4 bg-blue-900 relative">
+                    <a id="btn" class="cursor-pointer">
+                        <img src="img/wandertel/wandertel_landing.jpeg" class="h-auto w-auto" />
+
+                        <div class="absolute z-10 inset-0 h-full w-full bg-gray-900 bg-opacity-75">
+                            <div class="h-full w-full flex justify-center items-center text-gray-50">
+                                <p class="text-xl md:text-5xl">View gallery</p>
+                            </div>
                         </div>
-                        <div class="flex flex-col space-y-1 bg-gray-500">
-                            <img src="img/wandertel/wandertel_signup.jpeg" class="h-3/4 w-auto" />
-                            <img src="img/wandertel/wandertel_signin.jpeg" class="h-3/4 w-auto" />
-                        </div>
+
                     </a>
+
+                    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                        <!-- Background of PhotoSwipe. 
+           It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+
+                            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                            <div class="pswp__container">
+                                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                            </div>
+
+                            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                            <div class="pswp__ui pswp__ui--hidden">
+
+                                <div class="pswp__top-bar">
+
+                                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                                    <div class="pswp__counter"></div>
+
+                                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                                    <!--  <button class="pswp__button pswp__button--share" title="Share"></button> -->
+
+                                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                                    <div class="pswp__preloader">
+                                        <div class="pswp__preloader__icn">
+                                            <div class="pswp__preloader__cut">
+                                                <div class="pswp__preloader__donut"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                    <div class="pswp__share-tooltip"></div>
+                                </div>
+
+                                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                                </button>
+
+                                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                                </button>
+
+                                <div class="pswp__caption">
+                                    <div class="pswp__caption__center"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -169,76 +238,102 @@
         <p class="p-5 text-gray-900">&#169; 2020 - 2021 Gabriel Cacayan</p>
     </footer>
 
-    <!-- Custom JS, Jquery, and Magnific Popup Library -->
+    <!-- Custom JS and Photoswipe library -->
     <script src="js/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
 
 
     <script>
-        $('#wandertel').magnificPopup({
-            items: [{
+        var openPhotoSwipe = function () {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [{
                     src: 'img/wandertel/wandertel_home.jpeg',
-                    title: 'Wandertel\'s home page'
+                    w: 1240,
+                    h: 1269
                 },
                 {
                     src: 'img/wandertel/wandertel_about.jpeg',
-                    title: 'About page'
+                    w: 1240,
+                    h: 1759
                 },
                 {
                     src: 'img/wandertel/wandertel_single_room.jpeg',
-                    title: 'Single Room page'
+                    w: 1240,
+                    h: 1428
                 },
                 {
                     src: 'img/wandertel/wandertel_contact.jpeg',
-                    title: 'Contact page'
+                    w: 1240,
+                    h: 1103
                 },
                 {
                     src: 'img/wandertel/wandertel_admin_login.jpeg',
-                    title: 'Log in page for admin'
+                    w: 1240,
+                    h: 761
                 },
                 {
                     src: 'img/wandertel/wandertel_admin_forgot_pass.jpeg',
-                    title: 'Forgot password page for admin'
+                    w: 1240,
+                    h: 761
                 },
                 {
                     src: 'img/wandertel/wandertel_signup.jpeg',
-                    title: 'Sign up page'
+                    w: 1240,
+                    h: 642
                 },
                 {
                     src: 'img/wandertel/wandertel_signin.jpeg',
-                    title: 'Log in page'
+                    w: 1240,
+                    h: 635
                 },
                 {
                     src: 'img/wandertel/wandertel_profile.jpeg',
-                    title: 'Profile page'
+                    w: 1240,
+                    h: 756
                 },
                 {
                     src: 'img/wandertel/wandertel_my_booking.jpeg',
-                    title: 'Booking page'
+                    w: 1240,
+                    h: 822
                 },
                 {
                     src: 'img/wandertel/wandertel_change_password.jpeg',
-                    title: 'Change password page'
+                    w: 1240,
+                    h: 756
                 },
                 {
                     src: 'img/wandertel/wandertel_confirm_booking.jpeg',
-                    title: 'Book a room page'
+                    w: 1240,
+                    h: 1066
                 },
                 {
                     src: 'img/wandertel/wandertel_dashboard.jpeg',
-                    title: 'Dashboard page for admin'
+                    w: 1240,
+                    h: 716
                 },
+            ];
 
+            // define options (if needed)
+            var options = {
+                // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
 
-            ],
-            gallery: {
-                enabled: true
-            },
-            type: 'image'
-        });
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+
+            };
+
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        // openPhotoSwipe();
+
+        document.getElementById('btn').onclick = openPhotoSwipe;
     </script>
 </body>
 
