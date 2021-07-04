@@ -7,6 +7,11 @@ body {
 	transform: translateY(-0%);
 }
 
+.overlay-yowndrift {
+	display: block;
+}
+
+
 
 .fp-tableCell {
 	display: flex !important;
